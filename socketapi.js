@@ -11,7 +11,10 @@ io.on( "connection", function( socket ) {
 
     socket.on   ("sony", (msg) => {
         // console.log(msg)
-        io.emit('max', msg)
+        // io.emit('max', msg)
+
+        socket.broadcast.emit("max", msg)
+
     })
 
 });
